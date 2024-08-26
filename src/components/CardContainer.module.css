@@ -1,13 +1,19 @@
 .card__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 70px; /* Расстояние между карточками */
-  justify-content: center; /* Выравнивание карточек по центру */
+  gap: 70px;
+  justify-content: center;
   padding: 16px;
 }
 
 .card__item {
-  flex: 1 1 300px; /* Карточка будет занимать минимум 300px, но может растягиваться */
+  flex: 1 1 300px;
   max-width: 300px;
   box-sizing: border-box;
+}
+
+h1 {
+  letter-spacing: 0.1rem;
+  display: flex;
+  justify-content: center;
 }

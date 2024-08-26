@@ -3,4 +3,5 @@ export interface ICard {
   category: string;
   image: string;
   description: string;
+  favorite: boolean;
 }

@@ -1,10 +1,14 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { cardAPI } from "../services/CardService";
 import cardReducer from "../slices/cardSlice";
+import favoriteReducer from "../slices/favoriteSlice";
+import visibilityReducer from "../slices/visibilitySlice";
 
 const rootReducer = combineReducers({
   [cardAPI.reducerPath]: cardAPI.reducer,
   cards: cardReducer,
+  favorites: favoriteReducer,
+  visibility: visibilityReducer,
 });
 
 export const setupStore = () => {
