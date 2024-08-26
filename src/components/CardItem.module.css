@@ -1,6 +1,6 @@
 .card {
   width: 300px;
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,6 +10,7 @@
   border-radius: 8px;
   background-color: #fff;
   overflow: hidden;
+  position: relative; /* Для позиционирования крестика */
   transition: transform 0.3s ease;
 }
 
@@ -18,11 +19,14 @@
 }
 
 .card__title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0 0 8px;
   text-align: center;
   color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Обрезает текст и добавляет многоточие, если он не помещается */
 }
 
 .card__img {
@@ -39,20 +43,26 @@
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Максимум 2 строки */
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 
 .card__button__del {
-  padding: 8px 16px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #ff4d4f;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
   border: none;
-  border-radius: 4px;
+  font-size: 24px;
+  color: #8f7171;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.3s ease;
 }
 
 .card__button__del:hover {
-  background-color: #ff7875;
+  color: #de0b07;
 }
