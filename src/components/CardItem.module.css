@@ -1,0 +1,58 @@
+.card {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 8px;
+  text-align: center;
+  color: #333;
+}
+
+.card__img {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: cover;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.card div {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card__button__del {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff4d4f;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card__button__del:hover {
+  background-color: #ff7875;
+}
